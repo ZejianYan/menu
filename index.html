@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.stage{
+			perspective: 1200px;
+			width: 600px;
+			height: 200px;
+			border: 1px solid black;
+		}
+
+		.wrapper1{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 10px;
+			transform-style: preserve-3d;
+			transition: all 1s ease;
+		}
+
+		.wrapper1 div{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 50px;
+			transform-style: preserve-3d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			perspective: 1200px;
+			border-radius: 8px;
+		}
+		.wrapper2{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 115px;
+			transform-style: preserve-3d;
+		}
+
+		.wrapper3{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 115px;
+			transform-style: preserve-3d;
+			transition: all 1s ease;
+		}
+
+		.wrapper2 div{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 50px;
+			transform-style: preserve-3d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			perspective: 1200px;
+			border-radius: 8px;
+		}
+
+		.wrapper1 div:nth-child(1){
+			background: blue;
+			transform: rotateX(0deg) translateZ(25px);
+		}
+
+		.wrapper1 div:nth-child(2){
+			background: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+		.wrapper3 div:nth-child(1){
+			background: blue;
+			transform: rotateX(0deg) translateZ(25px);
+		}
+
+		.wrapper3 div:nth-child(2){
+			background: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+		.wrapper4 div:nth-child(1){
+			background: blue;
+			transform: rotateX(0deg) translateZ(25px);
+		}
+
+		.wrapper4 div:nth-child(2){
+			background: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+		.wrapper5 div:nth-child(1){
+			background: blue;
+			transform: rotateX(0deg) translateZ(25px);
+		}
+
+		.wrapper5 div:nth-child(2){
+			background: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+		.wrapper6 div:nth-child(1){
+			background: blue;
+			transform: rotateX(0deg) translateZ(25px);
+		}
+
+		.wrapper6 div:nth-child(2){
+			background: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+
+
+		.wrapper1:hover{
+			transform: rotateX(90deg);
+			
+		}
+		.wrapper4:hover{
+			transform: rotateX(90deg);
+			
+		}.wrapper5:hover{
+			transform: rotateX(90deg);
+			
+		}.wrapper6:hover{
+			transform: rotateX(90deg);
+			
+		}
+
+		.wrapper2:hover .wrapper3{
+			transform: rotateX(90deg);
+		}
+
+		.dis1{
+			width: 100px;
+			height: 50px;
+			background: yellow;
+			margin-top: 60px;
+			opacity: 0;
+		}
+		.dis2{
+			width: 100px;
+			height: 50px;
+			background: yellow;
+			margin-top: 115px;
+			opacity: 0;
+		}
+
+		.wrapper2:hover div{
+			opacity: 1;
+		}
+
+		.wrapper4{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 220px;
+			transform-style: preserve-3d;
+			transition: all 1s ease;
+		}
+
+		.wrapper4 div{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 50px;
+			transform-style: preserve-3d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			perspective: 1200px;
+			border-radius: 8px;
+		}
+
+		.wrapper5{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 325px;
+			transform-style: preserve-3d;
+			transition: all 1s ease;
+		}
+
+		.wrapper5 div{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 50px;
+			transform-style: preserve-3d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			perspective: 1200px;
+			border-radius: 8px;
+		}
+
+		.wrapper6{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			top: 10px;
+			left: 430px;
+			transform-style: preserve-3d;
+			transition: all 1s ease;
+		}
+
+		.wrapper6 div{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 50px;
+			transform-style: preserve-3d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			perspective: 1200px;
+			border-radius: 8px;
+		}		
+
+	</style>
+</head>
+<body>
+	<div class="stage"></div>
+		<div class="wrapper1">
+			<div>html</div>
+			<div>html</div>
+		</div>
+		<div class="wrapper2">
+			<div class='wrapper3'>
+				<div>css</div>
+				<div>css</div>
+			</div>		
+			<div>
+				<div class='dis1'>1</div>
+				<div class='dis2'>2</div>				
+			</div>	
+		</div>
+
+		<div class="wrapper4">
+			<div>JavaScript</div>
+			<div>JavaScript</div>
+		</div>
+
+		<div class="wrapper5">
+			<div>Node.js</div>
+			<div>Node.js</div>
+		</div>
+
+		<div class="wrapper6">
+			<div>html5</div>
+			<div>html5</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>
